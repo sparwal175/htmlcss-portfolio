@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Learn HTML5 and CSS3">
+    <meta name="author" content="Sandeep Parwal, HTML5/CSS3 Practice">
+    <meta name="keywords" content="BVC, Bow Valley College">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVC - Contact Us</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+    <script type="text/javascript">
+        function saveData() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            if( name !== "" && email !== "") {
+                let flag = confirm("Are you sure you want to provide your details?");
+                if (flag) {
+                    alert("Thanks for submitting your information.");
+                    return true;
+                }
+                return false;
+            } else {
+                alert("Please enter the required details.");
+                return true;
+            }
+        }
+    </script>
+
+  </head>
+  <body>
+    
+        <!-- Header -->    
+        <header class="bg-primary text-white">
+            <p><img src="./images/logo.jpg" width="50"></p>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </header>
+        <!-- Main content area -->
+        <div class="container">
+            
+            <h1 class="hr">Contact Us</h1>
+            
+            <div class="row">
+                <form enctype="multipart/form-data" action="mailto: s.parwal175@mybvc.ca" method="post" onsubmit="return saveData();">
+                    <table class="table_nb">
+                        <tbody>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" id="name" name="name" /></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type="email" id="email" name="email" /></td>
+                            </tr>
+                            <tr>
+                                <td>Calendar:</td>
+                                <td><input type="datetime-local" id="calendar" name="calendar" /></td>
+                            </tr>
+                            <tr>
+                                <td>Upload Image:</td>
+                                <td><input type="file" id="image" name="image" accept=".jpg, .jpeg, .png" /></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <button class="btn" name="Submit" type="submit">Submit</button> &nbsp;
+                                    <button class="btn reset" type="reset">Reset</button></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="container">
+            <div class="row">
+                <div class="feature col-3">
+                    <div class="feature-icon bg-primary"></div>
+                    <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link">
+                        Call to action
+                    </a>
+                </div>
+                <div class="feature col-3">
+                    <div class="feature-icon bg-primary mb-3"></div>
+                    <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link">
+                        Call to action
+                    </a>
+                </div>
+                <div class="feature col-3">
+                    <div class="feature-icon bg-primary mb-3"></div>
+                    <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+                    <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link">
+                        Call to action
+                    </a>
+                </div>         
+            </div>
+        </div> -->
+    
+        <!-- Footer -->    
+        <footer>
+            <p>&copy; 2024</p>
+            <ul class="social">
+            <li><img src="./images/instagram.png" /></li>
+            <li><img src="./images/facebook.png" /></li>
+            <li><img src="./images/youtube.png" /></li>
+            </ul>
+
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Help</a></li>
+            </ul>
+        </footer>
+    
+  </body>
+</html>
